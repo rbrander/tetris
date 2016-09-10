@@ -1,0 +1,112 @@
+Notes:
+
+- create index.html
+  - doctype
+  - head
+    - script tag tetris.js
+    - title
+    - meta
+  - body
+    - noscript
+    - div
+
+- create tetris.js
+  - create onload function
+    - get the div element
+    - set inner content to h1 tetris
+
+- add favicon and link in html
+
+- create game loop
+- create variables for canvas and context
+- add code to clear background
+- add a function to draw a block
+- add tetrominoes
+  - contains color of each block
+  - blocks contains four hex values
+  - each block represents a rotated view
+  - 0x0F00 is a vertical line in second column
+  - 0x2222 is a horizontal line in second row
+- add keypress handler
+  - discovered arrow keys are not captured
+  - used keydown instead with clearing 
+    input in update()
+- add currPiece and currRotation
+- add code to update() change rotation
+- add currPieceX and currPieceY
+- add drawTetrominoe()
+  - tricky bit handling
+- add code to update to change currPieceX,
+  currPieceY, and currPieceRotation
+- add a timer to move the piece
+
+- add a board to keep track of pieces
+- initiaize board
+- add drawBoard()
+- add drawCurrPiece()
+
+- add makeBlockBitmap()
+  - moved bit logic from drawBlock to
+    this function
+  - return a 2d boolean array
+
+- add hit detection
+  - get bitmap of curr block
+  - compare to board to find overlap
+  - make doesPieceOverlap() return boolean
+  - make addPieceToBoard()
+  - make resetPiece();
+  - make isPieceInBounds();
+  - apply isPieceInBounds and 
+    doesPieceOverlap in update()
+
+- add pause feature 'p'
+  - add 'p' check in update()
+    - toggle isPaused
+  - add shortcircuit to update() when isPaused
+  - update draw()
+    - hide piece
+    - show paused text
+
+- updated update() to check for bounds and
+  overlap each time piece is rotated or moved
+
+- whenever a piece is added to the board,
+  the code needs to check if a line was
+  completed, and if so adjust as necessary
+  - made checkBoard() and called it in addPieceToBoard
+
+- now we can leverage checkBoard() to check
+  for end of game
+
+- add game over detection
+  - add isGameOver
+  - on resetPiece, check if it overlaps
+
+
+//////////////////////////
+// TODO
+
+- add scoring
+  - could be number of lines
+  - multiplier for number of lines blown away at once
+
+- add animations
+
+- add a menu to start the game
+  - don't just start the game
+
+- add next piece
+
+- refactor code to use switch instead of if's in update()
+
+- add sounds
+
+
+
+
+
+
+
+
+

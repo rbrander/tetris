@@ -1,0 +1,28 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "A Tetris clone written in javascript",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server ./src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbrander/tetris.git"
+  },
+  "keywords": [
+    "tetris",
+    "javascript"
+  ],
+  "author": "Rob Brander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rbrander/tetris/issues"
+  },
+  "homepage": "https://github.com/rbrander/tetris#readme"
+}
